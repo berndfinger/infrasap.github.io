@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+# Project Overview
 
 This project is founded as a platform for open-source collaborations between SAP, SAP technology partners and customers, for unified tools and insights for SAP Landscapes
 
