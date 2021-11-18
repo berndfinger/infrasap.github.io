@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 title: Infra SAP 
 logo: /assets/img/InfraSAP_logo_v2.png
 description: A place for open source software that helps to make creating and managing SAP environments easier
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+=======
+theme: jekyll-theme-minimal
+>>>>>>> ec6f75286ec514f23fffc1cc2c086ab94771cbb1
