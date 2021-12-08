@@ -42,8 +42,13 @@ Ansible-lint cleaning is important so that a collection can be imported cleanly 
 - Put the following two files in the home directory of each role:
   - [.ansible-lint](https://github.com/berndfinger/sap-preconfigure/blob/bz2003630/.ansible-lint)
   - [.yamllint.yml](https://github.com/berndfinger/sap-preconfigure/blob/bz2003630/.yamllint.yml)
+The files are configured to enforce most default ansible-lint rules but skip others based on certain development requirements and experiences.
 
 - Put the following file into directory .github/workflow of each role:
-[.github/workflows/ansible-lint.yml](https://github.com/berndfinger/sap-preconfigure/blob/bz2003630/.github/workflows/ansible-lint.yml)
-This will trigger an ansible-lint run on GitHub after each git push.
+  - [.github/workflows/ansible-lint.yml](https://github.com/berndfinger/sap-preconfigure/blob/bz2003630/.github/workflows/ansible-lint.yml)
+This will trigger an ansible-lint v. 5.3.0 run in a freshly created virtual system on GitHub after each git push or pull request.
+
+- For skipping certain ansible-lint checks for certain tasks only, follow the chapter "False Positives: Skipping Rules" in [https://ansible-lint.readthedocs.io/en/latest/rules.html](https://ansible-lint.readthedocs.io/en/latest/rules.html):
+Add `# noqa' after the task name, followed by a space and the rule name from [Default Rules](https://ansible-lint.readthedocs.io/en/latest/default_rules.html), e.g. `package-latest`. Also add a line starting with `# Reason for noqa:`, followed by a space and a short explanation on why ansible-lint should not report a failure for the rule in this case.
+Example: [This line and the following one](https://github.com/berndfinger/sap-hana-preconfigure/blob/5be04d3a1b3f64b1966075896d9f7428fbf70a0b/tasks/RedHat/installation.yml#L83)
 
