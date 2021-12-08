@@ -6,7 +6,11 @@ rank: 3
 
 # Role Development Guidelines
 
-## Variable naming
+## Blocks and Tasks
+
+All blocks and tasks must be named and must have a unique name in each role.
+
+## Variable Naming
 
 Role variables need to be named as follows (example role name: sample_role)
 
@@ -30,7 +34,7 @@ __sample_role_fact_required_packages
 __sample_role_register_installed_packages
 ```
 
-## Ansible-lint cleaning
+## Ansible-lint Cleaning
 
 Only ansible-lint clean collections can be imported into Ansible Galaxy.
 
