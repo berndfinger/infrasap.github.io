@@ -12,7 +12,7 @@ All blocks and tasks must be named and must have a unique name in each role.
 
 ## Variable Naming
 
-Role variables need to be named as follows (example role name: sample_role)
+Role variables must be named as follows (example role name: sample_role)
 
 - Role external variables start with the role name, as in:
 ```
